@@ -5,50 +5,26 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 13:15:48 by melshafi          #+#    #+#             */
-/*   Updated: 2024/08/21 13:15:49 by melshafi         ###   ########.fr       */
+/*   Created: 2024/08/21 15:16:10 by melshafi          #+#    #+#             */
+/*   Updated: 2024/08/21 15:18:13 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
 
-#include "Phonebook.hpp"
-#include "Prompts.hpp"
-
 int main(void)
 {
-	std::string input;
-	Phonebook phonebook;
+	std::string str = "HI THIS IS BRAIN";
+	std::string *stringPTR = &str;
+	std::string &stringREF = str;
 
-	while (true)
-	{
-		std::cout << PROGRAM_PROMPT;
-		std::cin >> input;
+	std::cout << "Address of the string: " << &str << std::endl;
+	std::cout << "Address of the string: " << stringPTR << std::endl;
+	std::cout << "Address of the string: " << &stringREF << std::endl;
 
-		if (std::cin.eof())
-			std::cout << std::endl;
-
-		if (input == "ADD")
-		{
-			if (phonebook.add())
-				std::cout << PHONEBOOK_ADD_SUCCESS << std::endl;
-		}
-		else if (input == "SEARCH")
-		{
-			if (!phonebook.isEmpty())
-			{
-				phonebook.displayAll();
-				phonebook.interactiveSearch();
-			}
-			else
-				std::cout << PHONEBOOK_EMPTY << std::endl;
-		}
-		else if (input == "EXIT")
-			break;
-		else
-		 	std::cout << INVALID_COMMAND << std::endl;
-	}
-
+	std::cout << "Value of the string: " << str << std::endl;
+	std::cout << "Value of the string: " << *stringPTR << std::endl;
+	std::cout << "Value of the string: " << stringREF << std::endl;
 	return (0);
 }

@@ -1,4 +1,16 @@
-NAME = phonebook
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/08/21 13:15:50 by melshafi          #+#    #+#              #
+#    Updated: 2024/08/21 13:18:37 by melshafi         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = ex01
 
 SRCS = ./main.cpp\
 		./Contact.cpp\
@@ -9,7 +21,7 @@ OBJS = $(SRCS:.cpp=.o)
 
 CPPFLAGS = -Wall -Wextra -Werror
 CPPVERSION = -std=c++98
-COMPILER = clang++
+COMPILER = c++
 
 all: $(NAME)
 

@@ -1,8 +1,20 @@
-#include <iostream> 
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/21 13:16:51 by melshafi          #+#    #+#             */
+/*   Updated: 2024/08/21 13:16:51 by melshafi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <iostream>
 #include <ostream>
- 
-int main (int argn, char **argv) 
-{ 
+
+int main (int argn, char **argv)
+{
 	if (argn == 1)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
 	else if (argn > 1)
@@ -25,5 +37,5 @@ int main (int argn, char **argv)
 			std::cout << argv[i];
 	}
 	std::cout << std::endl;
-	return 0; 
+	return 0;
 }

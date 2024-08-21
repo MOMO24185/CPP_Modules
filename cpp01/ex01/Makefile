@@ -5,15 +5,16 @@
 #                                                     +:+ +:+         +:+      #
 #    By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/21 13:15:34 by melshafi          #+#    #+#              #
-#    Updated: 2024/08/21 13:18:31 by melshafi         ###   ########.fr        #
+#    Created: 2024/08/21 14:46:33 by melshafi          #+#    #+#              #
+#    Updated: 2024/08/21 14:47:00 by melshafi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex02
+NAME = ex01
 
-SRCS = ./tests.cpp\
-		./Account.cpp
+SRCS = ./main.cpp\
+		./Zombie.cpp\
+		./zombieHorde.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CPPFLAGS = -Wall -Wextra -Werror

@@ -5,15 +5,14 @@
 #                                                     +:+ +:+         +:+      #
 #    By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/08/21 13:15:34 by melshafi          #+#    #+#              #
-#    Updated: 2024/08/21 13:18:31 by melshafi         ###   ########.fr        #
+#    Created: 2024/08/21 14:46:33 by melshafi          #+#    #+#              #
+#    Updated: 2024/08/21 16:13:04 by melshafi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex02
+NAME = ex04
 
-SRCS = ./tests.cpp\
-		./Account.cpp
+SRCS = ./main.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CPPFLAGS = -Wall -Wextra -Werror

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/21 13:15:51 by melshafi          #+#    #+#             */
+/*   Updated: 2024/08/21 13:15:52 by melshafi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 #include <string>
 #include <sstream>
@@ -69,7 +81,7 @@ void Phonebook::displayContact(Contact contact)
 }
 
 void Phonebook::displayAll(void)
-{	
+{
 	for (int index = 0; index < this->size(); index++)
 	{
 		Contact current = this->contacts[index];
@@ -99,7 +111,7 @@ void Phonebook::interactiveSearch(void)
 	std::cout << ASK_FOR_CONTACT_INDEX;
 	std::cin >> input;
 	int	atoi_bool = Utilities::positive_atoi(input.c_str(), &index);
-	
+
 	if (!atoi_bool || index < 0 || index >= MAX_CONTACTS || index >= this->size())
 	{
 		if (std::cin.eof())

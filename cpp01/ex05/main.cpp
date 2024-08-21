@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 13:23:42 by melshafi          #+#    #+#             */
-/*   Updated: 2024/08/21 14:33:52 by melshafi         ###   ########.fr       */
+/*   Created: 2024/08/21 16:19:36 by melshafi          #+#    #+#             */
+/*   Updated: 2024/08/21 16:39:35 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Harl.hpp"
+#include <iostream>
+#include <string>
 
-Zombie* newZombie(std::string name)
+int	main(void)
 {
-	Zombie* zombie = new Zombie(name);
-	return (zombie);
+	Harl	harl;
+
+	harl.complain("debug");
+	harl.complain("info");
+	harl.complain("warning");
+	harl.complain("error");
+	harl.complain("Huh?");
+	return (0);
 }

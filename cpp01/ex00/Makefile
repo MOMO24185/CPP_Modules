@@ -1,15 +1,26 @@
-NAME = phonebook
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2024/08/21 13:20:02 by melshafi          #+#    #+#              #
+#    Updated: 2024/08/21 14:38:14 by melshafi         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+NAME = ex00
 
 SRCS = ./main.cpp\
-		./Contact.cpp\
-		./Phonebook.cpp\
-		./TableDisplay.cpp\
-		./Utilities.cpp
+		./newZombie.cpp\
+		./Zombie.cpp\
+		./randomChump.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CPPFLAGS = -Wall -Wextra -Werror
 CPPVERSION = -std=c++98
-COMPILER = clang++
+COMPILER = c++
 
 all: $(NAME)
 

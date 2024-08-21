@@ -1,19 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   newZombie.cpp                                      :+:      :+:    :+:   */
+/*   HumanB.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/21 13:23:42 by melshafi          #+#    #+#             */
-/*   Updated: 2024/08/21 14:33:52 by melshafi         ###   ########.fr       */
+/*   Created: 2024/08/21 15:28:38 by melshafi          #+#    #+#             */
+/*   Updated: 2024/08/21 15:47:35 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "HumanB.hpp"
 
-Zombie* newZombie(std::string name)
+HumanB::HumanB(std::string name)
 {
-	Zombie* zombie = new Zombie(name);
-	return (zombie);
+	this->name = name;
+	this->weapon = NULL;
+}
+
+HumanB::~HumanB()
+{
+}
+
+void	HumanB::attack()
+{
+	if (this->weapon)
+		std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
+	else
+		std::cout << this->name << " attacks with their bare hands" << std::endl;
+}
+
+void	HumanB::setWeapon(Weapon &weapon)
+{
+	this->weapon = &weapon;
 }

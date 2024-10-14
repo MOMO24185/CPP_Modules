@@ -5,25 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 11:47:20 by melshafi          #+#    #+#             */
-/*   Updated: 2024/10/14 11:47:21 by melshafi         ###   ########.fr       */
+/*   Created: 2024/10/14 11:46:30 by melshafi          #+#    #+#             */
+/*   Updated: 2024/10/14 14:29:30 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Fixed.hpp"
+#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
+#include "DiamondTrap.hpp"
 
 int main( void )
 {
-	Fixed a;
-	Fixed const b( Fixed( 5.05f ) * Fixed( 2 ) );
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	std::cout << b << std::endl;
-	std::cout << b / 0 << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	ClapTrap claptrap3("claptrap3");
+	ScavTrap scavtrap3("Scavtrap3");
+	FragTrap fragtrap3("FragTrap3");
+
+	DiamondTrap diamondtrap("DiamondTrap");
+
+	claptrap3.attack("Bulbasaur");
+	claptrap3.takeDamage(5);
+	claptrap3.beRepaired(3);
+	claptrap3.attack("Bulbasaur");
+
+	scavtrap3.attack("Bulbasaur");
+	scavtrap3.guardGate();
+
+	fragtrap3.attack("Bulbasaur");
+	fragtrap3.highFivesGuys();
+
+	diamondtrap.attack("Bulbasaur");
+	diamondtrap.whoAmI();
+
 	return 0;
 }

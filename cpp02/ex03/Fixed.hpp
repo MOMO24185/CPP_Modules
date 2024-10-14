@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/14 11:47:27 by melshafi          #+#    #+#             */
+/*   Updated: 2024/10/14 11:47:28 by melshafi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef FIXED_HPP
 # define FIXED_HPP
 
@@ -15,7 +27,7 @@ class Fixed
 		Fixed(const float value);
 		Fixed(const Fixed& other);
 		~Fixed();
-		
+
 		Fixed& operator=(const Fixed& other);
 
 		float operator+(const Fixed& other)const;

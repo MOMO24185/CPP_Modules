@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.hpp                                          :+:      :+:    :+:   */
+/*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/14 11:47:32 by melshafi          #+#    #+#             */
-/*   Updated: 2024/10/14 14:41:29 by melshafi         ###   ########.fr       */
+/*   Created: 2024/10/14 12:49:24 by melshafi          #+#    #+#             */
+/*   Updated: 2024/10/14 13:43:00 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POINT_HPP
-# define POINT_HPP
+#ifndef FRAGTRAP_HPP
+# define FRAGTRAP_HPP
 
-#include "Fixed.hpp"
+# include <iostream>
+# include "ClapTrap.hpp"
 
-class Point
+class FragTrap : public ClapTrap
 {
-	private:
-		Fixed const x;
-		Fixed const y;
 	public:
-		Point(void);
-		Point(const Fixed x, const Fixed y);
-		Point(const Point& other);
-		~Point();
+		FragTrap(void);
+		FragTrap(FragTrap const &obj);
+		FragTrap(std::string const &name);
+		~FragTrap();
+		FragTrap &operator=(FragTrap const &obj);
 
-		Point& operator=(const Point& other);
-
-		Fixed getX(void) const;
-		Fixed getY(void) const;
+		void attack(std::string const & target);
+		void highFivesGuys(void);
 };
-
-bool bsp( Point const a, Point const b, Point const c, Point const point);
 
 #endif

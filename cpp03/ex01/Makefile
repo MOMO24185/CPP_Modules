@@ -6,16 +6,15 @@
 #    By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/21 14:46:33 by melshafi          #+#    #+#              #
-#    Updated: 2024/10/14 11:24:23 by melshafi         ###   ########.fr        #
+#    Updated: 2024/10/14 12:48:32 by melshafi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex03
+NAME = ex01
 
 SRCS = ./main.cpp\
-		./Fixed.cpp\
-		./Point.cpp\
-		./bsp.cpp
+		./ClapTrap.cpp\
+		./ScavTrap.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CPPFLAGS = -Wall -Wextra -Werror

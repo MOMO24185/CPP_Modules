@@ -30,7 +30,7 @@ Animal &Animal::operator=(const Animal &animal)
 
 std::string Animal::getType() const
 {
-	std::cout << "Animal getType" << std::endl;
+	std::cout << type << " getType" << std::endl;
 	return type;
 }
 

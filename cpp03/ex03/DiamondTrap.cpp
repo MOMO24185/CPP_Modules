@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 13:46:50 by melshafi          #+#    #+#             */
-/*   Updated: 2024/10/14 14:35:57 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/10/28 12:14:54 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 DiamondTrap::DiamondTrap(void) : ClapTrap(), ScavTrap(), FragTrap("Diamond_Yapper_clap_name")
 {
-	this->name = "Diamond_Yapping";
+	this->name = "Diamond_Yapper";
 	this->hit_points = FragTrap::hit_points;
 	this->energy_points = ScavTrap::energy_points;
 	this->attack_damage = FragTrap::attack_damage;
-	std::cout << "DiamondTrap Default Constructor called" << std::endl;
+	std::cout << "DiamondTrap Default Constructor" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(DiamondTrap const &obj) : ClapTrap(obj), ScavTrap(obj), FragTrap(obj)
 {
-	std::cout << "DiamondTrap Copy Constructor called" << std::endl;
+	std::cout << "DiamondTrap Copy Constructor" << std::endl;
 }
 
 DiamondTrap::DiamondTrap(std::string const &name) : ClapTrap(), ScavTrap(), FragTrap(name + "_clap_name")
@@ -32,12 +32,12 @@ DiamondTrap::DiamondTrap(std::string const &name) : ClapTrap(), ScavTrap(), Frag
 	this->hit_points = FragTrap::hit_points;
 	this->energy_points = ScavTrap::energy_points;
 	this->attack_damage = FragTrap::attack_damage;
-	std::cout << "DiamondTrap Parametric Constructor called" << std::endl;
+	std::cout << "DiamondTrap Parametric Constructor" << std::endl;
 }
 
 DiamondTrap::~DiamondTrap()
 {
-	std::cout << "DiamondTrap Destructor called" << std::endl;
+	std::cout << "DiamondTrap Destructor" << std::endl;
 }
 
 DiamondTrap &DiamondTrap::operator=(DiamondTrap const &obj)
@@ -45,7 +45,7 @@ DiamondTrap &DiamondTrap::operator=(DiamondTrap const &obj)
 	ClapTrap::operator=(obj);
 	ScavTrap::operator=(obj);
 	FragTrap::operator=(obj);
-	std::cout << "DiamondTrap Assignation Operator called" << std::endl;
+	std::cout << "DiamondTrap = Operator" << std::endl;
 	return *this;
 }
 

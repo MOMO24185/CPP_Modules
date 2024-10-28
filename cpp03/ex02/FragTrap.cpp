@@ -6,13 +6,13 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:49:22 by melshafi          #+#    #+#             */
-/*   Updated: 2024/10/14 13:44:07 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/10/28 12:15:30 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(void)
+FragTrap::FragTrap(void) : ClapTrap()
 {
 	this->name = "Yapping machine with grenades";
 	this->hit_points = 100;
@@ -26,7 +26,7 @@ FragTrap::FragTrap(FragTrap const &obj) : ClapTrap(obj)
 	std::cout << "FragTrap Copy Constructor" << std::endl;
 }
 
-FragTrap::FragTrap(std::string const &name)
+FragTrap::FragTrap(std::string const &name) : ClapTrap(name)
 {
 	this->name = name;
 	this->hit_points = 100;
@@ -43,7 +43,7 @@ FragTrap::~FragTrap()
 FragTrap &FragTrap::operator=(FragTrap const &obj)
 {
 	ClapTrap::operator=(obj);
-	std::cout << "FragTrap Assignation Operator" << std::endl;
+	std::cout << "FragTrap = Operator" << std::endl;
 	return *this;
 }
 

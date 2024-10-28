@@ -6,15 +6,15 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:27:42 by melshafi          #+#    #+#             */
-/*   Updated: 2024/10/14 13:38:56 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/10/28 12:15:36 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap(void)
+ScavTrap::ScavTrap(void) : ClapTrap()
 {
-	this->name = "ScavTrap";
+	this->name = "ScavTrap Yap Machine";
 	this->hit_points = 100;
 	this->energy_points = 50;
 	this->attack_damage = 20;
@@ -26,7 +26,7 @@ ScavTrap::ScavTrap(ScavTrap const &obj) : ClapTrap(obj)
 	std::cout << "ScavTrap Copy Constructor" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string const &name)
+ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name)
 {
 	this->name = name;
 	this->hit_points = 100;
@@ -43,7 +43,7 @@ ScavTrap::~ScavTrap()
 ScavTrap &ScavTrap::operator=(ScavTrap const &obj)
 {
 	ClapTrap::operator=(obj);
-	std::cout << "ScavTrap Assignation Operator" << std::endl;
+	std::cout << "ScavTrap = Operator" << std::endl;
 	return *this;
 }
 

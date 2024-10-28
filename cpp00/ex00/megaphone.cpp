@@ -6,35 +6,27 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:16:51 by melshafi          #+#    #+#             */
-/*   Updated: 2024/08/21 13:16:51 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/10/21 13:52:08 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <ostream>
 
-int main (int argn, char **argv)
+int main (int argc, char **argv)
 {
-	if (argn == 1)
+	if (argc == 1)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
-	else if (argn > 1)
+	else if (argc > 1)
 	{
-		int i = 0, j = 0;
-
-		while (i < argn)
-		{
-			j = 0;
-			while (argv[i][j])
-			{
-				if (argv[i][j] >= 'a' && argv[i][j] <= 'z')
-					argv[i][j] -= 32;
-				j++;
-			}
-			i++;
+		for (int i = 1; i < argc; i++) {
+			std::string str = argv[i];
+			for (size_t j = 0; j < str.length(); j++)
+				str[j] = std::toupper(str[j]);
+			std::cout << str;
+			if (i < argc - 1)
+				std::cout << " ";
 		}
-		i = 0;
-		while (++i < argn)
-			std::cout << argv[i];
 	}
 	std::cout << std::endl;
 	return 0;

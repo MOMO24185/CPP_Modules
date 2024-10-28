@@ -6,7 +6,7 @@
 #    By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/21 13:20:02 by melshafi          #+#    #+#              #
-#    Updated: 2024/08/21 14:38:14 by melshafi         ###   ########.fr        #
+#    Updated: 2024/10/22 10:29:12 by melshafi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,11 +22,15 @@ CPPFLAGS = -Wall -Wextra -Werror
 CPPVERSION = -std=c++98
 COMPILER = c++
 
+HEADERS = Zombie.hpp
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(COMPILER) $(CPPFLAGS) $(CPPVERSION) -c $(SRCS)
 	$(COMPILER) $(CPPFLAGS) $(CPPVERSION) $(OBJS) -o $(NAME)
+
+$(OBJS): $(HEADERS)
 
 clean:
 	rm -f $(OBJS)

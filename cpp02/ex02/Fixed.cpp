@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 11:47:14 by melshafi          #+#    #+#             */
-/*   Updated: 2024/10/14 11:47:15 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/10/28 11:16:18 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,13 @@ float Fixed::operator/(const Fixed& other) const
 	return toFloat() / other.toFloat();
 }
 
+/*
+	Increments and decrements work with the fractional bits, so increments
+	only work with increments of 2^8 (which is 256) so when incrementing a
+	Fixed number, we increment it by 1/256 = 0.00390625 instead of incrementing
+	it by 1 as integers do.
+*/
+
 Fixed Fixed::operator++(void)
 {
 	value++;
@@ -84,14 +91,14 @@ Fixed Fixed::operator--(void)
 Fixed Fixed::operator++(int)
 {
 	Fixed tmp(*this);
-	operator++();
+	++(*this);
 	return tmp;
 }
 
 Fixed Fixed::operator--(int)
 {
 	Fixed tmp(*this);
-	operator--();
+	++(*this);
 	return tmp;
 }
 

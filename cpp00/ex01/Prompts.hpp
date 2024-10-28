@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:15:55 by melshafi          #+#    #+#             */
-/*   Updated: 2024/08/21 13:15:55 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:03:55 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@
 # define PHONEBOOK_ADD_OVERLOAD_CONT " due to the Phonebook reaching max capacity"
 # define PHONEBOOK_EMPTY "The Phonebook is empty, add new contacts to view them"
 # define NUMERIC_VALUES_ONLY "This value takes in Numerical values only"
+# define PHONE_NUMBER_LENGTH "Phone number should be less than 16 characters"
 # define ALPHA_VALUES_ONLY "This value takes in Alphabet values only!"
 # define INVALID_COMMAND "This is not a valid command!"
 

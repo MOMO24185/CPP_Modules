@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 13:15:43 by melshafi          #+#    #+#             */
-/*   Updated: 2024/08/21 13:15:44 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/10/21 14:02:06 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,6 +59,8 @@ Contact Contact::creator(void)
 			std::cin >> *contact_details[i];
 			if (i == 3 && !Utilities::is_digit(*contact_details[i]))
 				std::cout << *contact_details[i] << ": " << NUMERIC_VALUES_ONLY << std::endl;
+			else if (i == 3 && Utilities::is_digit(*contact_details[i]) && contact_details[i]->length() > 15)
+				std::cout << *contact_details[i] << ": " << PHONE_NUMBER_LENGTH << std::endl;
 			else if (i == 3 && Utilities::is_digit(*contact_details[i]))
 				break ;
 			else if (i != 3 && !Utilities::is_alpha(*contact_details[i]))

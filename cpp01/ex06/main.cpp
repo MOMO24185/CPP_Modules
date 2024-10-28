@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 16:19:36 by melshafi          #+#    #+#             */
-/*   Updated: 2024/08/21 17:00:15 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/10/22 12:54:57 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,16 +48,24 @@ int	main(int ac, char **av)
 
 	if (ac != 2)
 		return ((std::cout << "Usage: ./harl [DEBUG/INFO/WARNING/ERROR]" << std::endl), 1);
+	if (av[1][0] == '\0')
+		return ((std::cout << "Usage: ./harl [DEBUG/INFO/WARNING/ERROR]" << std::endl), 1);
 	switch (check_level(av[1]))
 	{
 	case 1:
 		harl.complain("debug");
+		harl.complain("info");
+		harl.complain("warning");
+		harl.complain("error");
 		break;
 	case 2:
 		harl.complain("info");
+		harl.complain("warning");
+		harl.complain("error");
 		break;
 	case 3:
 		harl.complain("warning");
+		harl.complain("error");
 		break;
 	case 4:
 		harl.complain("error");

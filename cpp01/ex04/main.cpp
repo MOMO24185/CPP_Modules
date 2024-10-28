@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/21 16:01:00 by melshafi          #+#    #+#             */
-/*   Updated: 2024/08/21 16:11:52 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/10/22 10:39:18 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ int	main(int ac, char **av)
 {
 	if (ac != 4)
 		return ((std::cout << "Usage: ./replace [filename] [s1] [s2]" << std::endl), 1);
+	if (av[2][0] == '\0' || av[3][0] == '\0')
+		return ((std::cout << "Error: s1 and s2 must not be empty" << std::endl), 1);
+	if (av[1][0] == '\0')
+		return ((std::cout << "Error: filename must not be empty" << std::endl), 1);
 	std::string filename = av[1];
 	std::string s1 = av[2];
 	std::string s2 = av[3];

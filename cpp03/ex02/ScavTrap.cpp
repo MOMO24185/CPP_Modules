@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 12:27:42 by melshafi          #+#    #+#             */
-/*   Updated: 2024/10/28 12:15:24 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/10/30 10:37:27 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,10 @@ ScavTrap::ScavTrap(void) : ClapTrap()
 ScavTrap::ScavTrap(ScavTrap const &obj) : ClapTrap(obj)
 {
 	std::cout << "ScavTrap Copy Constructor" << std::endl;
+	this->name = obj.name;
+	this->hit_points = obj.hit_points;
+	this->energy_points = obj.energy_points;
+	this->attack_damage = obj.attack_damage;
 }
 
 ScavTrap::ScavTrap(std::string const &name) : ClapTrap(name)

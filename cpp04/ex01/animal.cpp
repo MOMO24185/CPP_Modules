@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   animal.cpp                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/06 10:42:11 by melshafi          #+#    #+#             */
+/*   Updated: 2024/11/06 10:42:44 by melshafi         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "animal.hpp"
 
 Animal::Animal() : type("Animal")
@@ -7,7 +19,7 @@ Animal::Animal() : type("Animal")
 
 Animal::Animal(std::string type) : type(type)
 {
-	std::cout << "Animal constructor called" << std::endl;
+	std::cout << "Animal param constructor called" << std::endl;
 }
 
 Animal::~Animal()

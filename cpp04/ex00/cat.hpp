@@ -20,7 +20,7 @@ class Cat : public Animal
 	public:
 		Cat();
 		Cat(Cat const& cat);
-		virtual ~Cat();
+		~Cat();
 		Cat& operator=(Cat const& cat);
 		void makeSound() const;
 };

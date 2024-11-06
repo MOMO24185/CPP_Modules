@@ -30,7 +30,9 @@ Dog::~Dog()
 Dog& Dog::operator=(Dog const& dog)
 {
 	std::cout << "Dog assignation operator called" << std::endl;
-	Animal::operator=(dog);
+	if (this == &dog)
+		return *this;
+	this->type = dog.type;
 	return *this;
 }
 

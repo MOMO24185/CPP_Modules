@@ -24,6 +24,8 @@ int main()
 	// delete j;
 	// delete i;
 
+	std::cout << "----------------------" << std::endl;
+	
 	Dog basic;
 	{
 		Dog tmp = basic;

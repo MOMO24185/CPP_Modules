@@ -32,13 +32,27 @@ Dog::~Dog()
 
 Dog& Dog::operator=(Dog const& dog)
 {
+	if (this == &dog)
+		return *this;
 	std::cout << "Dog assignation operator called" << std::endl;
 	Animal::operator=(dog);
+	delete this->brain;
 	this->brain = new Brain(*dog.brain);
+	this->type = dog.type;
 	return *this;
 }
 
 void Dog::makeSound() const
 {
 	std::cout << "Woof woof" << std::endl;
+}
+
+Brain &Dog::getBrain() const
+{
+	return *this->brain;
+}
+
+void Dog::setBrain(Brain* brain)
+{
+	this->brain = brain;
 }

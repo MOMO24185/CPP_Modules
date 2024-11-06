@@ -30,7 +30,9 @@ Cat::~Cat()
 Cat& Cat::operator=(Cat const& cat)
 {
 	std::cout << "Cat assignation operator called" << std::endl;
-	Animal::operator=(cat);
+	if (this == &cat)
+		return *this;
+	this->type = cat.type;
 	return *this;
 }
 

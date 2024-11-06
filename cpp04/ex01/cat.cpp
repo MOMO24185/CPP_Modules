@@ -32,13 +32,27 @@ Cat::~Cat()
 
 Cat& Cat::operator=(Cat const& cat)
 {
+	if (this == &cat)
+		return *this;
 	std::cout << "Cat assignation operator called" << std::endl;
 	Animal::operator=(cat);
+	delete this->brain;
 	this->brain = new Brain(*cat.brain);
+	this->type = cat.type;
 	return *this;
 }
 
 void Cat::makeSound() const
 {
 	std::cout << "Meow meow meow meow (Sad Billy Eilish Song tune)" << std::endl;
+}
+
+Brain &Cat::getBrain() const
+{
+	return *this->brain;
+}
+
+void Cat::setBrain(Brain* brain)
+{
+	this->brain = brain;
 }

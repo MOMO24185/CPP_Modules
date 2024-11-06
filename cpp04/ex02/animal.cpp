@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 10:42:07 by melshafi          #+#    #+#             */
-/*   Updated: 2024/11/06 11:31:51 by melshafi         ###   ########.fr       */
+/*   Created: 2024/11/06 10:42:11 by melshafi          #+#    #+#             */
+/*   Updated: 2024/11/06 11:35:33 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ Animal::Animal(const Animal &animal) : type(animal.type)
 Animal &Animal::operator=(const Animal &animal)
 {
 	std::cout << "Animal assignation operator called" << std::endl;
-	type = animal.type;
+	this->type = animal.type;
 	return *this;
 }
 

@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:43:12 by melshafi          #+#    #+#             */
-/*   Updated: 2024/11/06 11:21:47 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/11/06 11:37:03 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,16 @@
 
 int main()
 {
-	// const Animal* j = new Dog();
-	// const Animal* i = new Cat();
+	const Animal* j = new Dog();
+	const Animal* i = new Cat();
 
-	// delete j;
-	// delete i;
+	delete j;
+	delete i;
 
-	Dog basic;
-	{
-		Dog tmp = basic;
-	}
+	// Animal* a = new Animal();
+	// delete a;
 
-	std::cout << "----------------------" << std::endl;
+	// Animal a;
 
 	// Animal* animals[100];
 

@@ -49,3 +49,16 @@ void Animal::makeSound() const
 {
 	std::cout << "Animal doesnt make any sound" << std::endl;
 }
+
+void Animal::setIdea(int index, std::string idea)
+{
+	(void)index;
+	(void)idea;
+}
+
+std::string const &Animal::getIdea(int index) const
+{
+	(void)index;
+	std::string *str = new std::string("Animal doesnt have any idea");
+	return *str;
+}

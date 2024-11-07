@@ -20,10 +20,11 @@ class Brain
 	public:
 		Brain();
 		Brain(Brain const& brain);
-		~Brain();
+		virtual ~Brain();
 		Brain& operator=(Brain const& brain);
 		std::string const &getIdea(int index) const;
 		void setIdea(int index, std::string idea);
+		virtual Brain &getBrain(void);
 	private:
 		std::string ideas[100];
 };

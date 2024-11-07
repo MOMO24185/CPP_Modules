@@ -6,11 +6,11 @@
 #    By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/21 14:46:33 by melshafi          #+#    #+#              #
-#    Updated: 2024/11/06 11:33:21 by melshafi         ###   ########.fr        #
+#    Updated: 2024/10/28 14:34:41 by melshafi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ex02
+NAME = ex01
 
 SRCS = ./main.cpp\
 		./animal.cpp\

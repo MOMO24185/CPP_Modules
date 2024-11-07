@@ -21,9 +21,11 @@ class Dog : public Animal
 	public:
 		Dog();
 		Dog(Dog const& dog);
-		virtual ~Dog();
+		~Dog();
 		Dog& operator=(Dog const& dog);
 		void makeSound() const;
+		void setIdea(int index, std::string idea);
+		std::string const &getIdea(int index) const;
 	private:
 		Brain* brain;
 };

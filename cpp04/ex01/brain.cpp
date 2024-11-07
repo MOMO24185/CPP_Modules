@@ -19,8 +19,8 @@ Brain::Brain()
 
 Brain::Brain(Brain const& brain)
 {
-	std::cout << "Brain copy constructor called" << std::endl;
 	*this = brain;
+	std::cout << "Brain copy constructor called" << std::endl;
 }
 
 Brain::~Brain()
@@ -51,4 +51,9 @@ void Brain::setIdea(int index, std::string idea)
 		std::cout << "Index out of bound" << std::endl;
 	else
 		this->ideas[index] = idea;
+}
+
+Brain &Brain::getBrain(void)
+{
+	return *this;
 }

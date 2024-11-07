@@ -26,19 +26,35 @@ Dog::Dog(Dog const& dog) : Animal(dog)
 
 Dog::~Dog()
 {
-	std::cout << "Dog destructor called" << std::endl;
 	delete this->brain;
+	std::cout << "Dog destructor called" << std::endl;
 }
 
 Dog& Dog::operator=(Dog const& dog)
 {
+	if (this == &dog)
+		return *this;
 	std::cout << "Dog assignation operator called" << std::endl;
 	Animal::operator=(dog);
+
+	if (this->brain)
+		delete this->brain;
 	this->brain = new Brain(*dog.brain);
+	this->type = dog.type;
 	return *this;
 }
 
 void Dog::makeSound() const
 {
 	std::cout << "Woof woof" << std::endl;
+}
+
+void Dog::setIdea(int index, std::string idea)
+{
+	this->brain->setIdea(index, idea);
+}
+
+std::string const &Dog::getIdea(int index) const
+{
+	return this->brain->getIdea(index);
 }

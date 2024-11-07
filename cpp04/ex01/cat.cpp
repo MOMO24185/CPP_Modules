@@ -26,8 +26,8 @@ Cat::Cat(Cat const& cat) : Animal(cat)
 
 Cat::~Cat()
 {
-	std::cout << "Cat destructor called" << std::endl;
 	delete this->brain;
+	std::cout << "Cat destructor called" << std::endl;
 }
 
 Cat& Cat::operator=(Cat const& cat)
@@ -36,7 +36,9 @@ Cat& Cat::operator=(Cat const& cat)
 		return *this;
 	std::cout << "Cat assignation operator called" << std::endl;
 	Animal::operator=(cat);
-	delete this->brain;
+
+	if (this->brain)
+		delete this->brain;
 	this->brain = new Brain(*cat.brain);
 	this->type = cat.type;
 	return *this;
@@ -47,12 +49,12 @@ void Cat::makeSound() const
 	std::cout << "Meow meow meow meow (Sad Billy Eilish Song tune)" << std::endl;
 }
 
-Brain &Cat::getBrain() const
+void Cat::setIdea(int index, std::string idea)
 {
-	return *this->brain;
+	this->brain->setIdea(index, idea);
 }
 
-void Cat::setBrain(Brain* brain)
+std::string const &Cat::getIdea(int index) const
 {
-	this->brain = brain;
+	return this->brain->getIdea(index);
 }

@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 10:42:11 by melshafi          #+#    #+#             */
-/*   Updated: 2024/11/06 11:35:33 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/11/06 11:31:20 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,4 +48,17 @@ std::string Animal::getType() const
 void Animal::makeSound() const
 {
 	std::cout << "Animal doesnt make any sound" << std::endl;
+}
+
+void Animal::setIdea(int index, std::string idea)
+{
+	(void)index;
+	(void)idea;
+}
+
+std::string const &Animal::getIdea(int index) const
+{
+	(void)index;
+	std::string *str = new std::string("Animal doesnt have any idea");
+	return *str;
 }

@@ -12,7 +12,14 @@
 
 NAME = ex03
 
-SRCS = ./main.cpp
+SRCS = ./main.cpp\
+		./AMateria.cpp\
+		./Character.cpp\
+		./Cure.cpp\
+		./Ice.cpp\
+		./ICharacter.cpp\
+		./IMateriaSource.cpp\
+		./MateriaSource.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 CPPFLAGS = -Wall -Wextra -Werror

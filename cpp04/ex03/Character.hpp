@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:05:25 by melshafi          #+#    #+#             */
-/*   Updated: 2024/11/06 12:05:25 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:47:18 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ class Character : public ICharacter
 
 		std::string const & getName() const;
 
+		Character *clone(Character *copy);
 		void equip(AMateria* m);
 		void unequip(int idx);
 		void use(int idx, ICharacter& target);

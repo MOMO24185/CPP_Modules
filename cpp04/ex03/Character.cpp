@@ -19,13 +19,7 @@ Character::~Character()
 
 Character::Character(const Character &src) : _name(src._name), _inventory()
 {
-	for (int i = 0; i < 4; i++)
-	{
-		if (src._inventory[i])
-			_inventory[i] = src._inventory[i]->clone();
-		else
-			_inventory[i] = NULL;
-	}
+
 	std::cout << "Character " << _name << " is created" << std::endl;
 }
 
@@ -37,13 +31,37 @@ Character& Character::operator=(const Character &src)
 	for (int i = 0; i < 4; i++)
 	{
 		if (_inventory[i])
+		{
 			delete _inventory[i];
+			_inventory[i] = NULL;
+		}
 		if (src._inventory[i])
 			_inventory[i] = src._inventory[i]->clone();
 		else
 			_inventory[i] = NULL;
 	}
+	std::cout << "Character assignation operator called" << std::endl;
 	return *this;
+}
+
+Character* Character::clone(Character *copy)
+{
+	if (this == copy)
+		return this;
+	_name = copy->getName();
+	for (int i = 0; i < 4; i++)
+	{
+		if (_inventory[i])
+		{
+			delete _inventory[i];
+			_inventory[i] = NULL;
+		}
+		if (copy->_inventory[i])
+			_inventory[i] = copy->_inventory[i]->clone();
+		else
+			_inventory[i] = NULL;
+	}
+	return (this);
 }
 
 std::string const & Character::getName() const

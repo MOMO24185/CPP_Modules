@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 12:04:54 by melshafi          #+#    #+#             */
-/*   Updated: 2024/11/06 12:04:54 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/11/08 14:36:04 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cure : public AMateria
 		Cure();
 		Cure(Cure const &obj);
 		Cure &operator=(Cure const &obj);
-		~Cure();
+		virtual ~Cure();
 		virtual AMateria* clone() const;
 		void use(ICharacter& target);
 };

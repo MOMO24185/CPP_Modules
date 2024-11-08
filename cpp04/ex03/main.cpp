@@ -6,7 +6,7 @@
 /*   By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 11:44:48 by melshafi          #+#    #+#             */
-/*   Updated: 2024/11/06 12:05:01 by melshafi         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:00:39 by melshafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,19 @@ int main()
 
 	ICharacter* bob = new Character("bob");
 
+	Character joe("joe");
+	Character joe2("joe2");
+	joe.equip(src->createMateria("ice"));
+	joe.equip(src->createMateria("cure"));
+
+	joe2 = joe;
+	joe2.use(0, joe2);
+
 	me->use(0, *bob);
 	me->use(1, *bob);
+
+	bob->clone(&joe);
+	bob->use(0, *me);
 
 	delete bob;
 	delete me;

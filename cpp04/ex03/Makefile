@@ -6,7 +6,7 @@
 #    By: melshafi <melshafi@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/08/21 14:46:33 by melshafi          #+#    #+#              #
-#    Updated: 2024/11/08 12:34:27 by melshafi         ###   ########.fr        #
+#    Updated: 2024/11/08 14:05:50 by melshafi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ SRCS = ./main.cpp\
 		./MateriaSource.cpp
 OBJS = $(SRCS:.cpp=.o)
 
-CPPFLAGS = -Wall -Wextra -Werror
+CPPFLAGS = -Wall -Wextra -Werror -g
 CPPVERSION = -std=c++98
 COMPILER = c++
 
